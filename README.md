@@ -1,5 +1,5 @@
 # Campus-Eats-DB-Project
-Final project for ITCS 3160 at UNCC for David Benton, Andrew Quinn, Chris Donohue  
+Final project for ITCS 3160 at UNCC for David Benton, Andrew Quinn, Chris Donohue, Matthew Lewis  
 
 ## Table of Contents
 * Introduction (Team, Project Description)
