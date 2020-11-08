@@ -19,7 +19,7 @@ Final project for ITCS 3160 at UNCC for David Benton, Andrew Quinn, Chris Donohu
 
 ## EERD
 
-![EERD For Campus Eats Database](images/CampusEats EERD.png)
+![EERD For Campus Eats Database](https://github.com/bentondavidl/Campus-Eats-DB-Project/blob/main/images/CampusEats%20EERD.png)
 
 ## MySQL Queries
 
