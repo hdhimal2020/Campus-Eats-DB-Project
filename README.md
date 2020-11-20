@@ -18,8 +18,16 @@ Final project for ITCS 3160 at UNCC for David Benton, Andrew Quinn, Chris Donohu
 This project defines a database for managing a food ordering and delivery system for a University. This database is based on work by Dhananjay Arora, Akshay Babu, Sumit Kawale, Prashant Madaan for an earlier semester of this class and is being used with permission. As part of this assignment, we are extending the model to include a rating system for the drivers and restaurants. 
 
 ## Use Case for Rating System
+
 ![Use Case Diagram For Campus Eats Database](https://github.com/bentondavidl/Campus-Eats-DB-Project/blob/main/images/CampusEats_UseCAse.jpg)
+
 ### Business Rules
+
+1)    The project illustrates the rating system of both deliver drivers and the restaurants
+2)    Our rating system captured under whole number (1-5)
+3)    Customers can rate the restaurant and/or driver for each order. 
+4)    Customers can access their own transaction information.
+5)    We will keep track of driver and the restaurant average rating for each month
 
 ## EERD
 
