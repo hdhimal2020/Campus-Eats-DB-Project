@@ -41,6 +41,24 @@
 | PRIMARY | `driver_id` | PRIMARY |   |
 | fk_D_student_id | `student_id` | INDEX |   |
 
+## Table: `driver_rating`
+
+### _Columns_: 
+
+| Column | Data type | Attributes | Default | Description |
+| --- | --- | --- | --- | ---  |
+| `rating_id` | INT | PRIMARY, Not null |   |   |
+| `person_id` | INT |  | `NULL` |  **foreign key** to column `person_id` on table `person`. |
+| `driver_id` | INT |  | `NULL` |  **foreign key** to column `driver_id` on table `driver`. |
+| `stars` | INT |  | `NULL` |   |
+
+### _Indices_: 
+
+| Name | Columns | Type | Description |
+| --- | --- | --- | --- |
+| PRIMARY | `rating_id` | PRIMARY |   |
+| fk_driver_driver_id_idx | `driver_id` | INDEX |   |
+| fk_person_person_id_idx | `person_id` | INDEX |   |
 ## Table: `faculty`
 
 ### _Columns_: 
@@ -142,6 +160,24 @@
 | --- | --- | --- | --- |
 | PRIMARY | `restaurant_id` | PRIMARY |   |
 
+## Table: `restaurant_rating`
+
+### _Columns_: 
+
+| Column | Data type | Attributes | Default | Description |
+| --- | --- | --- | --- | ---  |
+| `rating_id` | INT | PRIMARY, Not null |   |   |
+| `restaurant_id` | INT | `NULL` |   |  **foreign key** to column `restaurant_id` on table `restaurant`. |
+| `person_id` | INT | `NULL` |   |  **foreign key** to column `person_id` on table `person`. |
+| `stars` | INT |  | `NULL` |   |
+
+### _Indices_: 
+
+| Name | Columns | Type | Description |
+| --- | --- | --- | --- |
+| PRIMARY | `rating_id` | PRIMARY |   |
+| fk_restaurant_id_idx | `restaurant_id` | INDEX |   |
+| fk_person_person_id_idx | `person_id` | INDEX |   |
 ## Table: `staff`
 
 ### _Columns_: 
@@ -196,38 +232,4 @@
 | --- | --- | --- | --- |
 | PRIMARY | `vehicle_id` | PRIMARY |   |
 
-## Table: `driver_rating`
 
-### _Columns_: 
-
-| Column | Data type | Attributes | Default | Description |
-| --- | --- | --- | --- | ---  |
-| `person_person_id` | INT | PRIMARY, Not null |   |  **foreign key** to column `person_id` on table `person`. |
-| `driver_driver_id` | INT | PRIMARY, Not null |   |  **foreign key** to column `driver_id` on table `driver`. |
-| `stars` | TINYINT |  |   |   |
-
-### _Indices_: 
-
-| Name | Columns | Type | Description |
-| --- | --- | --- | --- |
-| PRIMARY | `person_person_id`, `driver_driver_id` | PRIMARY |   |
-| fk_rating_person1_idx | `person_person_id` | INDEX |   |
-| fk_rating_driver1_idx | `driver_driver_id` | INDEX |   |
-
-## Table: `restaurant_rating`
-
-### _Columns_: 
-
-| Column | Data type | Attributes | Default | Description |
-| --- | --- | --- | --- | ---  |
-| `restaurant_restaurant_id` | INT | PRIMARY, Not null |   |  **foreign key** to column `restaurant_id` on table `restaurant`. |
-| `person_person_id` | INT | PRIMARY, Not null |   |  **foreign key** to column `person_id` on table `person`. |
-| `stars` | TINYINT |  |   |   |
-
-### _Indices_: 
-
-| Name | Columns | Type | Description |
-| --- | --- | --- | --- |
-| fk_restaurant_restaurant1_idx | `restaurant_restaurant_id` | INDEX |   |
-| fk_restaurant_person1_idx | `person_person_id` | INDEX |   |
-| PRIMARY | `restaurant_restaurant_id`, `person_person_id` | PRIMARY |   |
